@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-screen h-screen sticky top-0 left-0 bg-white">
+    <div class=" w-screen h-screen sticky top-0 left-0 bg-white-500/50">
         <div class="flex flex-row w-full h-full justify-center items-center">
             <span
                 class="inline-block h-10 w-10 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"

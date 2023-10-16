@@ -3,9 +3,21 @@ import {ref} from 'vue';
 
 
 const isActionFloatingButtonActive = ref(false);
+const productsSaleCartShow = ref(false);
 
 const actionFloatingButtonClick = () => {
     isActionFloatingButtonActive.value = !isActionFloatingButtonActive.value
+}
+
+const productsSaleOnMouseAction = (show = false) => {
+    if (!show) {
+        setTimeout(() => {
+            productsSaleCartShow.value = show
+        }, 1000)
+    } else {
+        productsSaleCartShow.value = show
+    }
+
 }
 
 </script>
@@ -25,18 +37,9 @@ const actionFloatingButtonClick = () => {
                 <NuxtLink to="/products"
                           prefetchedClass="mx-1 my-2 font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
                           activeClass="text-cyan-500">
-                    <span>Acheter</span>
+                    <span>Acheter/Louer</span>
                 </NuxtLink>
             </div>
-
-            <div class="h-[50px] w-full flex flex-row justify-center items-center border-b">
-                <NuxtLink to="/products"
-                          prefetchedClass="mx-1 my-2  font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
-                          activeClass="text-cyan-500">
-                    <span>Louer</span>
-                </NuxtLink>
-            </div>
-
             <div class="h-[50px] w-full flex flex-row justify-center items-center border-b">
                 <NuxtLink to="/products"
                           prefetchedClass="mx-1 my-2 font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
@@ -77,7 +80,6 @@ const actionFloatingButtonClick = () => {
         </div>
     </div>
 
-
     <div class="md:sticky top-0 border-b bg-white">
         <div class="max-w-[1200px] m-auto sm:w-screen mb-5">
             <nav class="flex flex-row justify-center items-center">
@@ -89,34 +91,65 @@ const actionFloatingButtonClick = () => {
                 </div>
                 <div class="md:basis-3/4 md:visible invisible">
                     <div class="flex flex-row justify-end">
-                        <NuxtLink to="/"
-                                  prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
-                                  activeClass="text-cyan-500">
-                            <span>Acceuil</span>
-                        </NuxtLink>
-                        <NuxtLink to="/products"
-                                  prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
-                                  activeClass="text-cyan-500">
-                            <span>Acheter</span>
-                        </NuxtLink>
-                        <NuxtLink to="/products"
-                                  prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
-                                  activeClass="text-cyan-500">
-                            <span>Louer</span>
-                        </NuxtLink>
-                        <NuxtLink to="/products"
-                                  prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
-                                  activeClass="text-cyan-500">
-                            <span>Nous contacter</span>
-                        </NuxtLink>
-                        <NuxtLink to="/admin"
-                                  prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
-                                  activeClass="text-cyan-500">
-                            <span>Admin</span>
-                        </NuxtLink>
+                        <div>
+                            <NuxtLink to="/"
+                                      prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
+                                      activeClass="text-cyan-500">
+                                <span>Acceuil</span>
+                            </NuxtLink>
+                        </div>
+                        <div @mouseenter="productsSaleOnMouseAction(true)"
+                             @mouseleave="productsSaleOnMouseAction(false)">
+                            <NuxtLink to="/products"
+                                      prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
+                                      activeClass="text-cyan-500">
+                                <span>Acheter/Louer</span>
+                            </NuxtLink>
+                        </div>
+                        <div>
+                            <NuxtLink to="/products"
+                                      prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
+                                      activeClass="text-cyan-500">
+                                <span>Nous contacter</span>
+                            </NuxtLink>
+                        </div>
+
+                        <div>
+                            <NuxtLink to="/admin"
+                                      prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
+                                      activeClass="text-cyan-500">
+                                <span>Admin</span>
+                            </NuxtLink>
+                        </div>
                     </div>
                 </div>
             </nav>
+        </div>
+
+        <div v-if="productsSaleCartShow"
+             @mouseenter="productsSaleOnMouseAction(true)"
+             @mouseleave="productsSaleOnMouseAction(false)"
+             class="absolute left-1/3 z-100 bg-white divide-y divide-gray-100 shadow w-1/2 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="dropdownDelayButton">
+                <li>
+                    <a href="#"
+                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"
+                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                </li>
+                <li>
+                    <a href="#"
+                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                </li>
+                <li>
+                    <a href="#"
+                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                        out</a>
+                </li>
+            </ul>
         </div>
     </div>
 </template>

@@ -41,7 +41,7 @@ const productsSaleOnMouseAction = (show = false) => {
                 </NuxtLink>
             </div>
             <div class="h-[50px] w-full flex flex-row justify-center items-center border-b">
-                <NuxtLink to="/products"
+                <NuxtLink to="/contact"
                           prefetchedClass="mx-1 my-2 font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
                           activeClass="text-cyan-500">
                     <span>Nous contacter</span>
@@ -107,7 +107,7 @@ const productsSaleOnMouseAction = (show = false) => {
                             </NuxtLink>
                         </div>
                         <div>
-                            <NuxtLink to="/products"
+                            <NuxtLink to="/contact"
                                       prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
                                       activeClass="text-cyan-500">
                                 <span>Nous contacter</span>

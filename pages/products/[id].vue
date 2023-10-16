@@ -4,5 +4,5 @@
 
 
 <script setup>
-    const { id, name } = useRoute().params
+const {id, name} = useRoute().params
 </script>

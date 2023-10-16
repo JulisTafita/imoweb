@@ -8,3 +8,26 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+
+
+/* CROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #14b8a6;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #115e59;
+}

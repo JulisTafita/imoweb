@@ -1,3 +1,3 @@
 <template>
-    <div>OK</div>
+    <div class="h-screen">OK</div>
 </template>

@@ -39,12 +39,16 @@ const
         id
     }
         = useRoute().params
+
+
+const availableProds = getMockProducts()
+
 </script>
 
 <template>
     <div class="border-b-3 shadow-lg h-50">
         <div class="md:max-w-[1200px] w-screen max-w-screen md:m-auto">
-            <div class="flex flex-row gap-3 py-2">
+            <div class="hidden md:flex flex-row gap-3 py-2">
                 <div class="relative">
                     <div @click="showBuyRentHousePanel">
                         <div
@@ -61,7 +65,7 @@ const
                         </div>
                     </div>
                     <div v-if="isBuyRentHousePanel"
-                         class="absolute right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                         class="absolute right-0 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                          role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
                          tabindex="-1">
                         <div class="py-1" role="none">
@@ -370,8 +374,78 @@ const
     </div>
     <br>
     <div class="md:max-w-[1200px] w-screen max-w-screen md:m-auto">
-        <div class="text-lg">
-            <span class="font-bold">181 770 biens </span> vendre en Île-de-France
+        <div class="py-[20px]">
+            <div class="flex flex-row flex-wrap">
+                <div class="w-full md:basis-1/2 border-l px-10">
+                    <div class="text-lg">
+                        <span class="font-bold">181 770 biens </span> en vente en Île-de-France
+                    </div>
+                    <br>
+                </div>
+                <div class="w-full md:basis-1/2 border-l px-10 ml-auto">
+                    <div class="text-lg p-4">
+                        <span class="font-bold">Filtre rapide: </span>
+                    </div>
+                    <div class="w-full flex flex-row flex-wrap gap-6 text-sm">
+                        <div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer" checked>
+                                <div
+                                    class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+
+                                </div>
+                                <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Annonces avec photos</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer" checked>
+                                <div
+                                    class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+
+                                </div>
+                                <span
+                                    class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Exclusivités</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer" checked>
+                                <div
+                                    class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+
+                                </div>
+                                <span
+                                    class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Dans ma région</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <br>
+            <div class="w-full py-2 flex flex-row justify-center px-5 text-center md:px-0 md:text-right">
+                <span class="">List des biens :</span>
+            </div>
+            <div class=" flex flex-row justify-center items-center py-2">
+                <span class="border-b  border-slate-300 w-1/2 py-2"></span>
+            </div>
+            <br>
+            <div class="flex flex-row flex-wrap gap-0 md:gap-6 justify-center md:justify-start md:mt-5">
+                <div v-for="(pro,index) in availableProds.data">
+                    <Product :product="pro"/>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="flex flex-row justify-center md:justify-end items-center py-2">
+            <div>
+                <button class="bg-red-400 py-2 px-10 text-white rounded-sm">
+                    Voir plus
+                </button>
+            </div>
         </div>
     </div>
 

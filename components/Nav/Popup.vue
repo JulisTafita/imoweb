@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="bg-white hidden md:block" style="z-index: 100">
+    <div class="bg-white hidden md:block" style="z-index: 999">
         <div class="text-lg font-bold border-b p-4">Achat immobilier</div>
 
         <div class="flex flex-row gap-2">

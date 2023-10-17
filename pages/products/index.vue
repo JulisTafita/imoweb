@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="flex flex-row">
+        <div class="md:flex lg:flex flex-row">
             <div class="basis-3/5">
                 <div class="h-[670px] w-[670px] bg-[gray]">hkgush</div>
                 <div class="fixed w-[200px]"></div>
@@ -33,7 +33,7 @@
             </div>
         </div>
 
-        <div class="flex mt-10 ml-20">
+        <div class="lg:flex mt-10 ml-20">
             <div class="basis-1/2 p-5">
                 <h1 class="font-bold text-4xl">Maison Nantes 7 pièce(s) 153 m2</h1><br><br>
                 <p class="texr-[gray] text-xl">Nantes Erdre - Saint Joseph de Porterie </p><br><br>
@@ -47,7 +47,7 @@
                     salle de bains avec douche et baignoire. W-C à chaque niveau. <br>Un garage indépendant avec un coin
                     atelier vient parfaire l'ensemble <br><br>Les informations sur les risques auxquels ce bien est
                     exposé sont disponibles sur le site Géorisques : <a href="#">www.georisques.gouv.fr</a>
-                </p>
+                </p> <br>
                 <div class="border rounded-lg p-5">
                     <h1 class="text-xl text-[#008890] font-bold ">Bilan energetique</h1>
                     <div>image</div>
@@ -134,9 +134,9 @@
                                          placeholder="     Votre email"></div>
                 <div class="my-5"><input class="border w-[400px] rounded-[20px] h-[70px]" type="text" name="" id=""
                                          placeholder="     Votre téléphone"></div>
-                <div><input type="checkbox" name="" id=""><span>Je souhaite recevoir les annonves similaires ou suggestion personnalisées de la part du réseau l'Adresse.</span>
+                <div><input type="checkbox" name="" id="" class="w-8 h-8 rounded-full"><span>Je souhaite recevoir les annonves similaires ou suggestion personnalisées de la part du réseau l'Adresse.</span>
                 </div>
-                <div><input type="checkbox" name="" id=""><span>En cochant la case ci-avant et en envoyant ce formulaire,vous acceptez que l'Adresse des Conseils Immobiliers traite les données personnelles que vous nous communiquez dans ce fomrulaire(notamment vos données d'identité,de contact et de commentaires libres). Les données saisies dans les champs ci-dessus nous sont nécessaires pour répondre à votre prise de contact et ne sont utilisées qu'à cette fin.</span>
+                <div><input type="checkbox" name="" id="" class="w-8 h-8 rounded-full"><span>En cochant la case ci-avant et en envoyant ce formulaire,vous acceptez que l'Adresse des Conseils Immobiliers traite les données personnelles que vous nous communiquez dans ce fomrulaire(notamment vos données d'identité,de contact et de commentaires libres). Les données saisies dans les champs ci-dessus nous sont nécessaires pour répondre à votre prise de contact et ne sont utilisées qu'à cette fin.</span>
                 </div>
                 <p>Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, vous êtes
                     invités à consulter la Politique de protection des données de l'Adresse des Conseils

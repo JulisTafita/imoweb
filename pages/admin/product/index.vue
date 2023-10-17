@@ -1,7 +1,16 @@
 <script setup>
+import {ref} from 'vue';
+
 definePageMeta({
-    layout: "admin",
+    layout: "admin-product",
 });
 
+
 </script>
-<template>PRODUCT</template>
+<template>
+    <div>
+        <div>
+            <AdminPartCategory/>
+        </div>
+    </div>
+</template>

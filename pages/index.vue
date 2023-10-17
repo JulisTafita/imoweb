@@ -29,6 +29,47 @@ const showTypeOfCityhDropDownState = (state = false) => {
 
 const {data} = await useFetch('/api/product/one?id=245')
 
+const query = gql`
+        query getProducts{
+            getProducts{
+                createdAt
+                updatedAt
+                deletedAt
+                id
+                title
+                price
+                category
+                __typename
+              }
+        }`
+
+const {result} = useQuery(query)
+
+//export default defineEventHandler(async (event) => {
+//
+//    const query = gql`
+//        query getProducts{
+//            getProducts{
+//                createdAt
+//                updatedAt
+//                deletedAt
+//                id
+//                title
+//                price
+//                category
+//                __typename
+//              }
+//        }
+//    `
+//
+//
+//    const { result } = useQuery(query)
+//
+//    return {
+//        products : result
+//    }
+//})
+
 </script>
 
 
@@ -116,5 +157,7 @@ const {data} = await useFetch('/api/product/one?id=245')
         <!--</div>-->
     </div>
 
-    <h5>{{ data }}</h5>
+    <h5>{{ result }}</h5>
+
+
 </template>

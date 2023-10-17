@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center justify-center h-30 border-b">
         <div>
-            <img class="h-20 w-40" src="/img/nativel_icon.jpg" alt="Discover Nuxt 3"/>
+            <!--<img class="h-20 w-40" src="/img/nativel_icon.jpg" alt="Discover Nuxt 3"/>-->
         </div>
     </div>
     <div class="overflow-y-auto overflow-x-hidden flex-grow">

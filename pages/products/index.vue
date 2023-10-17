@@ -82,25 +82,25 @@
              <div>Vous voulez vendre votre maison ou appartement? <br>Estimez la valeur de votre bien</div>
          </div>
 
-         <div class="bg-[gray] h-[500px]">image</div>
+         <div class="bg-[gray] h-[500px] mb-10">image</div>
 
          <div class="flex ">
-               <div class="basis-1/3">
-                    <h1>Vous souhaitez visiter la Maison</h1>
-                    <p>Prenez rendez-vous avec l'agence.</p>
-                    <div>
-                        <h1>Agence immobilière l'Adresse L'ATELIER IMMOBILIER</h1>
-                        <p>511 route St Joseph de Porterie <br>44300 <br>44300 NANTES</p>
-                        <p><span>Transaction :</span> <br>02 40 52 25 00</p><br><br>
-                        <p><span>Location :</span> <br> 02 40 52 25 00</p>
-                        <div><button>Nos honoraires</button></div>
-                        <div><button>Mentions légales</button></div>
+               <div class="basis-1/3 m-10">
+                    <h1 class="text-[#008890] text-4xl font-bold mb-10 tracking-wider">Vous souhaitez visiter la Maison</h1>
+                    <p class="text-[#5A5C5F] mb-10">Prenez rendez-vous avec l'agence.</p>
+                    <div class="border rounded-xl p-10">
+                        <h1 class="font-bold text-2xl my-3 font-sans">Agence immobilière l'Adresse L'ATELIER IMMOBILIER</h1><br>
+                        <p class="text-xl">511 route St Joseph de Porterie <br>44300 <br>44300 NANTES</p><br>
+                        <p class="text-xl text-[#008890]"><span class="font-bold tracking-wider text-black">Transaction :</span> <br><span class="font-2xl">02 40 52 25 00</span></p><br><br>
+                        <p class="text-xl text-[#008890]"><span class="font-bold tracking-wider text-black">Location :</span> <br><span class="font-2xl">02 40 52 25 00</span> </p><br>
+                        <div class="flex justify-center m-5 "><button class=" font-bold bg-[#008890] w-[360px] tracking-wider rounded-2xl h-[80px]"> <span class="font-bold text-white text-2xl">Nos honoraires</span></button></div>
+                        <div class="flex justify-center m-5 "><button class=" font-bold bg-[#008890] w-[360px] tracking-wider rounded-2xl h-[80px]"> <span class="font-bold text-white text-2xl">Mentions légales</span></button></div>
                     </div>
                </div>
                <div class="basis-1/3">
-                    <div><input type="text" name="" id="" placeholder="Votre nom"></div>
-                    <div><input type="text" name="" id="" placeholder="Votre email"></div>
-                    <div><input type="text" name="" id="" placeholder="Votre téléphone"></div>
+                    <div class="my-5"><input class="border w-[400px] rounded-[20px] h-[70px]" type="text" name="" id="" placeholder="     Votre nom"></div>
+                    <div class="my-5"><input class="border w-[400px] rounded-[20px] h-[70px]" type="text" name="" id="" placeholder="     Votre email"></div>
+                    <div class="my-5"><input class="border w-[400px] rounded-[20px] h-[70px]" type="text" name="" id="" placeholder="     Votre téléphone"></div>
                        <div><input type="checkbox" name="" id=""><span>Je souhaite recevoir les annonves similaires ou suggestion personnalisées de la part du réseau l'Adresse.</span></div>
                        <div><input type="checkbox" name="" id=""><span>En cochant la case ci-avant et en envoyant ce formulaire,vous acceptez que l'Adresse des Conseils Immobiliers traite les données personnelles que vous nous communiquez dans ce fomrulaire(notamment vos données d'identité,de contact et de commentaires libres). Les données saisies dans les champs ci-dessus nous sont nécessaires pour répondre à votre prise de contact et ne sont utilisées qu'à cette fin.</span></div>
                        <p>Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, vous êtes invités à consulter la Politique de protection des données de l'Adresse des Conseils Immobiliers.</p>

@@ -63,7 +63,7 @@ const productsSaleOnMouseAction = (show = false) => {
         </div>
     </div>
 
-    <div class="sticky top-0 border-b bg-white">
+    <div class="sticky top-0 border-b bg-white" style="z-index: 999">
         <div class="max-w-[1200px] m-auto sm:w-screen">
             <nav class="flex flex-row justify-center items-center h-[10vh] sm:px-5">
                 <div class="md:basis-1/4 flex flex-row h-full">

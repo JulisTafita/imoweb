@@ -134,9 +134,67 @@ const mockProd = {
 
     <div class="py-[20px]">
         <div class="md:max-w-[1200px] max-w-screen md:m-auto">
-            <div class="flex flex-row flex-wrap gap-4">
-                <div>
-                    <Product :product="mockProd"/>
+            <div>
+                <br>
+                <div class="w-full py-2 flex flex-row justify-center px-5 text-center md:px-0 md:text-right">
+                    <span class="">Appartement à vendre dans les alentours d'Antananarivo (5 annonces)</span>
+                </div>
+                <div class=" flex flex-row justify-center items-center py-2">
+                    <span class="border-b  border-slate-300 w-1/2 py-2"></span>
+                </div>
+                <br>
+                <div class="flex flex-row flex-wrap gap-0 md:gap-6 justify-center md:justify-start md:mt-5">
+                    <div>
+                        <Product :product="mockProd"/>
+                    </div>
+                    <div>
+                        <Product :product="mockProd"/>
+                    </div>
+                    <div>
+                        <Product :product="mockProd"/>
+                    </div>
+                </div>
+                <div
+                    class="w-full flex flex-row flex-wrap gap-0 md:gap-6 justify-center items-end px-0 md:px-2  md:justify-end mt-5 md:mt-5">
+                    <div>
+                        <NuxtLink to="/products"
+                                  prefetchedClass="border px-5 py-2 rounded bg-red-200 flex flex-row justify-center items-center font-bold text-lg tracking-wide hover:text-white w-full h-full  "
+                                  activeClass="text-white">
+                            <span>Voir tout</span>
+                        </NuxtLink>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div>
+                <br>
+                <div class="w-full py-2 flex flex-row justify-center px-5 text-center md:px-0 md:text-right">
+                    <span class="">Appartement à vendre dans les alentours d'Antananarivo (5 annonces)</span>
+                </div>
+                <div class=" flex flex-row justify-center items-center py-2">
+                    <span class="border-b  border-slate-300 w-1/2 py-2"></span>
+                </div>
+                <br>
+                <div class="flex flex-row flex-wrap gap-0 md:gap-6 justify-center md:justify-start md:mt-5">
+                    <div>
+                        <Product :product="mockProd"/>
+                    </div>
+                    <div>
+                        <Product :product="mockProd"/>
+                    </div>
+                    <div>
+                        <Product :product="mockProd"/>
+                    </div>
+                </div>
+                <div
+                    class="w-full flex flex-row flex-wrap gap-0 md:gap-6 justify-center items-end px-0 md:px-2  md:justify-end mt-5 md:mt-5">
+                    <div>
+                        <NuxtLink to="/products"
+                                  prefetchedClass="border px-5 py-2 rounded bg-red-200 flex flex-row justify-center items-center font-bold text-lg tracking-wide hover:text-white w-full h-full  "
+                                  activeClass="text-white">
+                            <span>Voir tout</span>
+                        </NuxtLink>
+                    </div>
                 </div>
             </div>
         </div>

@@ -45,7 +45,8 @@ const productsSaleOnMouseAction = (show = false) => {
     </div>
 
     <div @click="actionFloatingButtonClick"
-         class="absolute bottom-5 right-5 border-2 border-cyan-500 rounded-full w-14 h-14 md:invisible shadow-lg">
+         class="fixed bottom-5 right-5 border-2 border-cyan-500 rounded-full w-14 h-14 md:invisible shadow-lg bg-white"
+         style="z-index: 100">
         <div class="flex flex-row justify-center items-center w-full h-full text-slate-500">
             <svg v-if="!isActionFloatingButtonActive" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                  class="bi bi-list w-10 h-10"
@@ -63,7 +64,7 @@ const productsSaleOnMouseAction = (show = false) => {
         </div>
     </div>
 
-    <div class="md:sticky top-0 border-b bg-white">
+    <div class="sticky top-0 border-b bg-white">
         <div class="max-w-[1200px] m-auto sm:w-screen">
             <nav class="flex flex-row justify-center items-center h-[10vh] sm:px-5">
                 <div class="md:basis-1/4 flex flex-row h-full">

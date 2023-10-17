@@ -40,16 +40,6 @@ const productsSaleOnMouseAction = (show = false) => {
                     <span>Contacts</span>
                 </NuxtLink>
             </div>
-
-            <!--<div class="h-[50px] w-full flex flex-row justify-center items-center border-b">-->
-            <!--    <NuxtLink to="/admin"-->
-            <!--              prefetchedClass="mx-1 my-2  font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"-->
-            <!--              activeClass="text-cyan-500">-->
-            <!--        <span>Admin</span>-->
-            <!--    </NuxtLink>-->
-            <!--</div>-->
-
-
         </div>
 
     </div>
@@ -75,23 +65,23 @@ const productsSaleOnMouseAction = (show = false) => {
 
     <div class="md:sticky top-0 border-b bg-white">
         <div class="max-w-[1200px] m-auto sm:w-screen">
-            <nav class="flex flex-row justify-center items-center h-[10vh]">
+            <nav class="flex flex-row justify-center items-center h-[10vh] sm:px-5">
                 <div class="md:basis-1/4 flex flex-row h-full">
                     <NuxtLink to="/"
                               prefetchedClass="text-gray-800 text-xl font-bold md:text-2xl hover:text-gray-700">
                         <img class="h-20 w-40" src="/img/nativel_icon.jpg" alt="Discover Nuxt 3"/>
                     </NuxtLink>
                 </div>
-                <div class="md:basis-3/4 md:visible invisible h-full">
+                <div class="md:basis-3/4 md:block hidden h-full">
                     <div class="flex flex-row justify-end gap-3 h-full w-full">
-                        <div class="w-[115px]">
+                        <div class="w-[115px] hover:border-cyan-500 border-white">
                             <NuxtLink to="/"
                                       prefetchedClass="hidden  md:flex flex-row justify-center items-center font-bold text-lg tracking-wide hover:text-cyan-500 w-full h-full"
                                       activeClass="text-cyan-500">
                                 <span>Acceuil</span>
                             </NuxtLink>
                         </div>
-                        <div class="w-[120px] hover:border-b-4 border-cyan-500"
+                        <div class="w-[120px] border-b-4 hover:border-cyan-500 border-white"
                              @mouseenter="productsSaleOnMouseAction(true)"
                              @mouseleave="productsSaleOnMouseAction(false)">
                             <NuxtLink to="/products"
@@ -100,7 +90,7 @@ const productsSaleOnMouseAction = (show = false) => {
                                 <span>Acheter/Louer</span>
                             </NuxtLink>
                         </div>
-                        <div class="w-[115px]">
+                        <div class="w-[115px] border-b-4 hover:border-cyan-500 border-white">
                             <NuxtLink to="/contact"
                                       prefetchedClass="hidden  md:flex flex-row justify-center items-center font-bold text-lg tracking-wide hover:text-cyan-500 w-full h-full"
                                       activeClass="text-cyan-500">

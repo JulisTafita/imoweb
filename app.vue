@@ -6,7 +6,7 @@
 
         </div>
 
-        <div v-if="!loading">
+        <div>
             <NuxtLayout>
                 <NuxtPage/>
             </NuxtLayout>

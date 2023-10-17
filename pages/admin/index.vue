@@ -8,13 +8,23 @@ definePageMeta({
 
 const isLoading = ref(false);
 
+const setEmail = ref("admin@nativel.imo");
+const setPsw = ref("");
+
+
 const
     submitForm = async () => {
         isLoading.value = true;
+        let _email = setEmail.value;
+        let _psw = setPsw.value;
 
-        setTimeout(async () => {
-            await navigateTo("/admin/dashboard")
-        }, 1000)
+        await $fetch('/api/signIn?email=' + _email + '&&psw=' + _psw).then((data) => {
+            setTimeout(async () => {
+                await navigateTo("/admin/dashboard?email=" + data.email + "&&psw=" + data.password)
+            }, 1000)
+        })
+
+
     }
 
 </script>
@@ -22,7 +32,7 @@ const
 
 <template>
     <section class="bg-gray-50 dark:bg-gray-900">
-        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
             <div
                 class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -33,14 +43,17 @@ const
                         <div>
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre
                                 Email :</label>
-                            <input type="email" name="email" id="email"
-                                   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                   placeholder="admin@nativel.imo" required="" value="admin@nativel.imo">
+                            <input type="email" name="email" id="email" v-model="setEmail"
+                                   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg
+                            focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700
+                            dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
+                            dark:focus:border-blue-500"
+                                   placeholder="admin@nativel.imo" required="">
                         </div>
                         <div>
                             <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre
                                 mot de passe :</label>
-                            <input type="password" name="password" id="password" placeholder="••••••••"
+                            <input type="password" name="password" id="password" placeholder="••••••••" v-model="setPsw"
                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                    required="">
                         </div>

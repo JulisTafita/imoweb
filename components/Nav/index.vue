@@ -10,14 +10,7 @@ const actionFloatingButtonClick = () => {
 }
 
 const productsSaleOnMouseAction = (show = false) => {
-    if (!show) {
-        setTimeout(() => {
-            productsSaleCartShow.value = show
-        }, 1000)
-    } else {
-        productsSaleCartShow.value = show
-    }
-
+    productsSaleCartShow.value = show
 }
 
 </script>
@@ -44,17 +37,17 @@ const productsSaleOnMouseAction = (show = false) => {
                 <NuxtLink to="/contact"
                           prefetchedClass="mx-1 my-2 font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
                           activeClass="text-cyan-500">
-                    <span>Nous contacter</span>
+                    <span>Contacts</span>
                 </NuxtLink>
             </div>
 
-            <div class="h-[50px] w-full flex flex-row justify-center items-center border-b">
-                <NuxtLink to="/admin"
-                          prefetchedClass="mx-1 my-2  font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
-                          activeClass="text-cyan-500">
-                    <span>Admin</span>
-                </NuxtLink>
-            </div>
+            <!--<div class="h-[50px] w-full flex flex-row justify-center items-center border-b">-->
+            <!--    <NuxtLink to="/admin"-->
+            <!--              prefetchedClass="mx-1 my-2  font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"-->
+            <!--              activeClass="text-cyan-500">-->
+            <!--        <span>Admin</span>-->
+            <!--    </NuxtLink>-->
+            <!--</div>-->
 
 
         </div>
@@ -81,44 +74,51 @@ const productsSaleOnMouseAction = (show = false) => {
     </div>
 
     <div class="md:sticky top-0 border-b bg-white">
-        <div class="max-w-[1200px] m-auto sm:w-screen mb-5">
-            <nav class="flex flex-row justify-center items-center">
-                <div class="md:basis-1/4 flex flex-row">
+        <div class="max-w-[1200px] m-auto sm:w-screen">
+            <nav class="flex flex-row justify-center items-center h-[10vh]">
+                <div class="md:basis-1/4 flex flex-row h-full">
                     <NuxtLink to="/"
                               prefetchedClass="text-gray-800 text-xl font-bold md:text-2xl hover:text-gray-700">
                         <img class="h-20 w-40" src="/img/nativel_icon.jpg" alt="Discover Nuxt 3"/>
                     </NuxtLink>
                 </div>
-                <div class="md:basis-3/4 md:visible invisible">
-                    <div class="flex flex-row justify-end">
-                        <div>
+                <div class="md:basis-3/4 md:visible invisible h-full">
+                    <div class="flex flex-row justify-end gap-3 h-full w-full">
+                        <div class="w-[115px]">
                             <NuxtLink to="/"
-                                      prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
+                                      prefetchedClass="hidden  md:flex flex-row justify-center items-center font-bold text-lg tracking-wide hover:text-cyan-500 w-full h-full"
                                       activeClass="text-cyan-500">
                                 <span>Acceuil</span>
                             </NuxtLink>
                         </div>
-                        <div @mouseenter="productsSaleOnMouseAction(true)"
+                        <div class="w-[120px] hover:border-b-4 border-cyan-500"
+                             @mouseenter="productsSaleOnMouseAction(true)"
                              @mouseleave="productsSaleOnMouseAction(false)">
                             <NuxtLink to="/products"
-                                      prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
+                                      prefetchedClass="hidden  md:flex flex-row justify-center items-center font-bold text-lg tracking-wide hover:text-cyan-500 w-full h-full"
                                       activeClass="text-cyan-500">
                                 <span>Acheter/Louer</span>
                             </NuxtLink>
                         </div>
-                        <div>
+                        <div class="w-[115px]">
                             <NuxtLink to="/contact"
-                                      prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
+                                      prefetchedClass="hidden  md:flex flex-row justify-center items-center font-bold text-lg tracking-wide hover:text-cyan-500 w-full h-full"
                                       activeClass="text-cyan-500">
-                                <span>Nous contacter</span>
+                                <span>Contacts</span>
                             </NuxtLink>
                         </div>
-
-                        <div>
-                            <NuxtLink to="/admin"
-                                      prefetchedClass="lg:mx-1 my-2 lg:block hidden font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"
+                        <div class="flex flex-row gap-2 justify-center items-center hover:text-cyan-500">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                          d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                </svg>
+                            </div>
+                            <NuxtLink to="/contact"
+                                      prefetchedClass="hidden  md:flex flex-row justify-center items-center font-bold text-lg tracking-wide hover:text-cyan-500 w-full h-full  "
                                       activeClass="text-cyan-500">
-                                <span>Admin</span>
+                                <span>+261 38 81 335 89</span>
                             </NuxtLink>
                         </div>
                     </div>
@@ -129,27 +129,8 @@ const productsSaleOnMouseAction = (show = false) => {
         <div v-if="productsSaleCartShow"
              @mouseenter="productsSaleOnMouseAction(true)"
              @mouseleave="productsSaleOnMouseAction(false)"
-             class="absolute left-1/3 z-100 bg-white divide-y divide-gray-100 shadow w-1/2 dark:bg-gray-700">
-            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                aria-labelledby="dropdownDelayButton">
-                <li>
-                    <a href="#"
-                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                </li>
-                <li>
-                    <a href="#"
-                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                </li>
-                <li>
-                    <a href="#"
-                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                </li>
-                <li>
-                    <a href="#"
-                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                        out</a>
-                </li>
-            </ul>
+             class="absolute top-2.3em left-1/3 z-100 bg-white  p-8 border border-cyan-500 rounded-lg divide-y divide-gray-100 shadow w-1/2 dark:bg-gray-700">
+            <NavPopup/>
         </div>
     </div>
 </template>

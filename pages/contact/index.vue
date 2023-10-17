@@ -100,10 +100,10 @@ const {data} = await useFetch('/api/contact/contact')
                    </div>
                    <div>
                          <div>
-                              <input type="checkbox" name="" id=""><span class="px-2">Je souhaite recevoir les annonces similaires ou suggestions personnalisées de la part du réseau l'Adresse.</span>
+                              <input type="checkbox" name="" id=""><span class="px-2 text-lg">Je souhaite recevoir les annonces similaires ou suggestions personnalisées de la part du réseau l'Adresse.</span>
                          </div>
                          <div>
-                              <input type="checkbox" name="" id="" ><span class="px-2">En cochant la case ci-avant et en envoyant ce formulaire, vous acceptez que l'Adresse des Conseils Immobiliers traite les données personnelles que vous nous communiquez dans ce formulaire (notamment vos données d'identité, de contact et de commentaires libres). Les données saisies dans les champs ci-dessus nous sont nécessaires pour répondre à votre prise de contact et ne sont utilisées qu'à cette fin.Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, vous êtes invités à consulter la Politique de protection des données de l'Adresse des Conseils Immobiliers.</span>
+                              <input type="checkbox" name="" id="" ><span class="px-2 text-lg">En cochant la case ci-avant et en envoyant ce formulaire, vous acceptez que l'Adresse des Conseils Immobiliers traite les données personnelles que vous nous communiquez dans ce formulaire (notamment vos données d'identité, de contact et de commentaires libres). Les données saisies dans les champs ci-dessus nous sont nécessaires pour répondre à votre prise de contact et ne sont utilisées qu'à cette fin.Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, vous êtes invités à consulter la Politique de protection des données de l'Adresse des Conseils Immobiliers.</span>
                          </div>
                    </div>
               </div>

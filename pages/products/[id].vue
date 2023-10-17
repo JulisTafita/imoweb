@@ -13,33 +13,7 @@
                                 <div class="basis-1/2 p-5">
                                     <h1 class="font-bold text-4xl">Maison Nantes 7 pièce(s) 153 m2</h1><br><br>
                                     <p class="texr-[gray] text-xl">Nantes Erdre - Saint Joseph de Porterie </p><br><br>
-                                    <p class="texr-[gray] text-xl">Sur terrain de plus de 1000 m², une formule parfaite
-                                        pour
-                                        cette
-                                        magnifique contemporaine de style, décorée avec goût et rigoureusement
-                                        entretenue. A
-                                        l'occasion
-                                        d'une visite, vous découvrirez un vaste espace de vie (cheminée) avec cuisine
-                                        aménagée
-                                        équipée le
-                                        tout tourné vers un beau et grand jardin arboré idéalement exposé. Vous
-                                        profiterez
-                                        également d'un
-                                        coin salon extérieur idéal pour partager un moment en famille ou entre amis .
-                                        Une vraie
-                                        vie de plain
-                                        pied avec 2 chambres en rez-de-chaussée dont une avec salle d'eau privative.
-                                        A l'étage un dégagement ouvert sur le niveau inferieur desservant 3 chambres de
-                                        12 à 16
-                                        m², une
-                                        salle de bains avec douche et baignoire. W-C à chaque niveau. <br>Un garage
-                                        indépendant
-                                        avec un coin
-                                        atelier vient parfaire l'ensemble <br><br>Les informations sur les risques
-                                        auxquels ce
-                                        bien est
-                                        exposé sont disponibles sur le site Géorisques : <a href="#">www.georisques.gouv.fr</a>
-                                    </p>
+                                    <p class="texr-[gray] text-xl">Sur terrain de plus de 1000 m², une formule parfaite pour cette magnifique contemporaine de style, décorée avec goût et rigoureusement entretenue. A l'occasion d'une visite, vous découvrirez un vaste espace de vie (cheminée) avec cuisine aménagée équipée le tout tourné vers un beau et grand jardin arboré idéalement exposé. Vous profiterez également d'un coin salon extérieur idéal pour partager un moment en famille ou entre amis . Une vraie vie de plain pied avec 2 chambres en rez-de-chaussée dont une avec salle d'eau privative. A l'étage un dégagement ouvert sur le niveau inferieur desservant 3 chambres de 12 à 16 m², une salle de bains avec douche et baignoire. W-C à chaque niveau. <br>Un garage indépendant avec un coin atelier vient parfaire l'ensemble <br><br>Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques : <a href="#">www.georisques.gouv.fr</a></p>
                                 </div>
                             </div>
                         </div>

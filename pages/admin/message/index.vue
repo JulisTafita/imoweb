@@ -4,8 +4,12 @@ definePageMeta({
 });
 
 </script>
-
-
 <template>
-    DASHBOARD
+
+    <div>
+
+        <Nav/>
+
+    </div>
+
 </template>

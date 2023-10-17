@@ -20,7 +20,7 @@ const
 
         await $fetch('/api/signIn?email=' + _email + '&&psw=' + _psw).then((data) => {
             setTimeout(async () => {
-                await navigateTo("/admin/dashboard?email=" + data.email + "&&psw=" + data.password)
+                await navigateTo("/admin/dashboard")
             }, 1000)
         })
 

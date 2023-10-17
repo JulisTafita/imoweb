@@ -4,8 +4,4 @@ definePageMeta({
 });
 
 </script>
-
-
-<template>
-    DASHBOARD
-</template>
+<template>PRODUCT</template>

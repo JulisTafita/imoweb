@@ -1,5 +1,5 @@
 <template>
-    <div class="hidden md:block">
+    <div class="hidden">
         <br>
         <div class="w-full bg-slate-200">
             <div class="max-w-[1200px] m-auto sm:w-screen">

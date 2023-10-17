@@ -17,8 +17,7 @@ const productsSaleOnMouseAction = (show = false) => {
 
 <template>
     <div v-if="isActionFloatingButtonActive" class="sticky top-0 w-screen h-screen bg-white px-10 py-[50px]">
-
-        <div class="flex flex-col items-center justify-center">
+        <div class="flex flex-col items-center justify-center items-center h-full w-full">
             <div class="h-[50px] w-full flex flex-row justify-center items-center border-b">
                 <NuxtLink to="/"
                           prefetchedClass="mx-1 my-2 font-bold text-lg h-12 pt-3 px-3 tracking-wide hover:text-cyan-500"

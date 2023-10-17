@@ -12,7 +12,7 @@ const {product} = props;
 </script>
 
 <template>
-    <div class="cursor-pointer bg-white" @click="navigateTo('/products/')">
+    <div class="cursor-pointer bg-white" @click="navigateTo('/products/1')">
         <div class="max-w-sm max-h-[510px] rounded-sm overflow-hidden shadow-xl">
             <img class="w-full" src="/img/imo_1.jpeg" alt="Sunset in the mountains">
             <div class="px-6 pt-4 max-h-60 text-ellipsis">

@@ -116,11 +116,11 @@ const productsSaleOnMouseAction = (show = false) => {
             </nav>
         </div>
 
-        <div v-if="productsSaleCartShow"
-             @mouseenter="productsSaleOnMouseAction(true)"
-             @mouseleave="productsSaleOnMouseAction(false)"
-             class="absolute top-2.3em left-1/3 z-100 bg-white  p-8 border border-cyan-500 rounded-lg divide-y divide-gray-100 shadow w-1/2 dark:bg-gray-700">
-            <NavPopup/>
-        </div>
+        <!--<div v-if="productsSaleCartShow"-->
+        <!--     @mouseenter="productsSaleOnMouseAction(true)"-->
+        <!--     @mouseleave="productsSaleOnMouseAction(false)"-->
+        <!--     class="absolute top-2.3em left-1/3 z-100 bg-white  p-8 border border-cyan-500 rounded-lg divide-y divide-gray-100 shadow w-1/2 dark:bg-gray-700">-->
+        <!--    <NavPopup/>-->
+        <!--</div>-->
     </div>
 </template>

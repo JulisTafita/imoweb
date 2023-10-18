@@ -1,6 +1,6 @@
-export default defineEventHandler(async (event) => {
+export const getProducts = async () => {
     const query = gql`
-        query getProducts{
+        query{
             getProducts{
                 createdAt
                 updatedAt
@@ -9,15 +9,13 @@ export default defineEventHandler(async (event) => {
                 title
                 price
                 category
+                type
+                Description
                 __typename
-              }
-        }
-    `
+            }
+        }`
 
+    const {data: products} = await useAsyncQuery(query)
 
-    const { data } = await useQuery(query)
-
-    return {
-        products : data
-    }
-})
+    return products
+}

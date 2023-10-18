@@ -93,55 +93,112 @@ const test = () => {
             </div>
         </div>
         <div class="py-2">
-            <div class="relative overflow-x-auto max-h-[800px] overflow-y ">
-                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                    <tr>
-                        <th scope="col" class="px-6 py-3">
-                            Numéro
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Nom
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Description
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                            Actions
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr v-for="(category, index) in categories.getCategories"
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            {{ category.number }}
-                        </th>
-                        <td class="px-6 py-4">
-                            {{ category.name }}
-
-                        </td>
-                        <td class="px-6 py-4">
-                            {{ category.description }}
-                        </td>
-                        <td class="px-6 py-4">
-                            <div class="flex flex-row w-10 h-full justify-start items-center gap-3">
-                                <button @click="showNewCategory(category.id,category.name,category.description)"
-                                        type="button"
-                                        class="px-2 py-2 bg-lime-300 rounded text-white cursor-pointer">
-                                    Modifier
-                                </button>
-                                <button type="button"
-                                        class="px-2 py-2 bg-red-200 rounded text-white cursor-pointer">
-                                    Supprimer
-                                </button>
+            <div class="h-[80vh]">
+                <div class="h-[60vh] bg-slate-100 cursor-pointer w-full overflow-y-auto">
+                    <div class="h-full">
+                        <div class="flex flex-col h-full">
+                            <div class="h-full">
+                                <div class="inline-block w-full">
+                                    <div class="w-full">
+                                        <table class="w-full text-left text-sm font-light">
+                                            <thead
+                                                class="sticky top-0 border-b font-medium dark:border-neutral-500 bg-white">
+                                            <tr>
+                                                <th scope="col" class="px-6 py-4 ">#</th>
+                                                <th scope="col" class="px-6 py-4 ">Nom</th>
+                                                <th scope="col" class="px-6 py-4 ">description</th>
+                                                <th scope="col" class="px-6 py-4 ">action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr v-for="(prod, index) in categories.getCategories"
+                                                class="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 dark:hover:bg-neutral-600">
+                                                <td class="whitespace-nowrap px-6 py-4 font-medium">{{
+                                                        prod.number
+                                                    }}
+                                                </td>
+                                                <td class="whitespace-nowrap px-6 py-4">{{ prod.name }}</td>
+                                                <td class="whitespace-nowrap px-6 py-4">{{ prod.description }}</td>
+                                                <td class="whitespace-nowrap px-6 py-4">
+                                                    <div class="w-full flex flex-row gap-3">
+                                                        <button type="button"
+                                                                @click="showNewCategory(prod.number,prod.name,prod.description)"
+                                                                class="hover:underline">Modifier
+                                                        </button>
+                                                        <button class="hover:underline">Supprimer</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+                        <div class="flex flex-1 justify-between sm:hidden">
+                            <a href="#"
+                               class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
+                            <a href="#"
+                               class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+                        </div>
+                        <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                            <div>
+                                <p class="text-sm text-gray-700">
+                                    Showing
+                                    <span class="font-medium">1</span>
+                                    to
+                                    <span class="font-medium">10</span>
+                                    of
+                                    <span class="font-medium">97</span>
+                                    results
+                                </p>
+                            </div>
+                            <div>
+                                <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm"
+                                     aria-label="Pagination">
+                                    <a href="#"
+                                       class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                                        <span class="sr-only">Previous</span>
+                                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                    <!-- Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" -->
+                                    <a href="#" aria-current="page"
+                                       class="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
+                                    <a href="#"
+                                       class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
+                                    <a href="#"
+                                       class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
+                                    <span
+                                        class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">...</span>
+                                    <a href="#"
+                                       class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
+                                    <a href="#"
+                                       class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
+                                    <a href="#"
+                                       class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
+                                    <a href="#"
+                                       class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
+                                        <span class="sr-only">Next</span>
+                                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 </template>

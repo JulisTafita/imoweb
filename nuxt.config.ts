@@ -22,7 +22,8 @@ export default defineNuxtConfig({
     autoImports: true,
     clients: {
       default: {
-        httpEndpoint: 'http://185.170.214.196:8085/query'
+        //        httpEndpoint: 'http://185.170.214.196:8085/query'
+                httpEndpoint: 'http://localhost:8085/query'
       }
     },
   }

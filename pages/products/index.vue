@@ -61,20 +61,6 @@ const reloadProductsList = async () => {
             <div class="md:max-w-[1200px] w-screen max-w-screen md:m-auto">
                 <div class="hidden md:flex flex-row gap-3 py-2">
                     <div class="relative">
-                        <div @click="showBuyRentHousePanel">
-                            <div
-                                class="border border-black px-5 py-1 rounded-[20px] cursor-pointer hover:bg-cyan-500 hover:border-cyan-500 hover:text-white font-bold">
-                                <div>
-                                    <div class="flex flex-row gap-1 justify-start items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                             class="bi bi-dot w-10 h-10 text-red-600" viewBox="0 0 16 16">
-                                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-                                        </svg>
-                                        <span>Acheter, Maison <span class="text-cyan-700">(+1)</span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div v-if="isBuyRentHousePanel"
                              class="absolute right-0 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                              role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
@@ -112,21 +98,22 @@ const reloadProductsList = async () => {
                                 <!--   role="menuitem"-->
                                 <!--   tabindex="-1" id="menu-item-0">{{ index + 1 }} - {{ area }}</a>-->
                                 <div class="px-5">
-                                      <div class="py-3">
-                                          <span class="font-bold">Où cherchez-vous?</span>
-                                      </div>
-                                      <div>
-                                           <div class="py-3">
-                                                <select name="" id="" class="border w-full py-3 px-3">
-                                                      <option value="exemple">Antananarivo</option>
-                                                      <option value="exemple">Antananarivo</option>
-                                                      <option value="exemple">Antananarivo</option>
-                                                </select>
-                                            </div>
-                                           <div>
-                                               <input type="text" placeholder="Ville,Code postal" class="border w-full py-3 px-3">
-                                           </div>
-                                      </div>
+                                    <div class="py-3">
+                                        <span class="font-bold">Où cherchez-vous?</span>
+                                    </div>
+                                    <div>
+                                        <div class="py-3">
+                                            <select name="" id="" class="border w-full py-3 px-3">
+                                                <option value="exemple">Antananarivo</option>
+                                                <option value="exemple">Antananarivo</option>
+                                                <option value="exemple">Antananarivo</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <input type="text" placeholder="Ville,Code postal"
+                                                   class="border w-full py-3 px-3">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -378,55 +365,70 @@ const reloadProductsList = async () => {
                                                 </div>
                                             </div>
                                         </div>
-                                          
-                                         <!-- Recherche avancé-->
-                                        <div>
-                                             <div>
-                                                   <div class="py-3">
-                                                       <span class="font-bold">Une référence?</span>
-                                                   </div>
-                                                   <div>
-                                                       <input type="text" placeholder="Ex:123456" class="w-full border py-3 px-3">
-                                                   </div>
-                                             </div>
-                                             <div>
-                                                  <div class="pt-4 pb-2">
-                                                       <span class="font-bold">Programme neuf | Viager</span>
-                                                  </div>
-                                                  <div>
-                                                       <div><input type="radio"><span class="px-3 text-gray-700 text-lg">Programme neuf</span></div>
-                                                       <div><input type="radio"><span class="px-3 text-gray-700 text-lg">Viager</span></div>
-                                                  </div>
-                                             </div>
-                                             <div>
-                                                   <div >
-                                                         <div class="py-5">
-                                                            <span  class="font-bold">Vos envies</span>
-                                                        </div>
-                                                        <div class="overflow-scroll h-[200px] bg-gray-100 p-3">
-                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Jardin, terrain</span></div>
-                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Piscine</span></div>
-                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Terrasse ou balcon</span></div>
-                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Terrasse ou balcon</span></div>
-                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Ascenseur</span></div>
-                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Cheminée</span></div>
-                                                        </div>
-                                                   </div>
-                                             </div>
-                                        </div>
 
-                                       <!--  <div class="text-lg font-bold border-t ">
-                                            <div
-                                                class="flex flex-row gap-3 w-full w-full mt-3 justify-center items-center ">
-                                                <div class="underline cursor-pointer">Annuler</div>
-                                                <div class="ml-auto">
-                                                    <button type="button"
-                                                            class="border cursor-pointer border-red-500 bg-red-500 text-white text-sm p-4 px-5 rounded-full">
-                                                        Appliquer
-                                                    </button>
+                                        <!-- Recherche avancé-->
+                                        <div>
+                                            <div>
+                                                <div class="py-3">
+                                                    <span class="font-bold">Une référence?</span>
+                                                </div>
+                                                <div>
+                                                    <input type="text" placeholder="Ex:123456"
+                                                           class="w-full border py-3 px-3">
                                                 </div>
                                             </div>
-                                        </div> -->
+                                            <div>
+                                                <div class="pt-4 pb-2">
+                                                    <span class="font-bold">Programme neuf | Viager</span>
+                                                </div>
+                                                <div>
+                                                    <div><input type="radio"><span class="px-3 text-gray-700 text-lg">Programme neuf</span>
+                                                    </div>
+                                                    <div><input type="radio"><span class="px-3 text-gray-700 text-lg">Viager</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <div class="py-5">
+                                                        <span class="font-bold">Vos envies</span>
+                                                    </div>
+                                                    <div class="overflow-scroll h-[200px] bg-gray-100 p-3">
+                                                        <div class="items-center py-2"><input class="h-5 w-5"
+                                                                                              type="checkbox"><span
+                                                            class="p-3">Jardin, terrain</span></div>
+                                                        <div class="items-center py-2"><input class="h-5 w-5"
+                                                                                              type="checkbox"><span
+                                                            class="p-3">Piscine</span></div>
+                                                        <div class="items-center py-2"><input class="h-5 w-5"
+                                                                                              type="checkbox"><span
+                                                            class="p-3">Terrasse ou balcon</span></div>
+                                                        <div class="items-center py-2"><input class="h-5 w-5"
+                                                                                              type="checkbox"><span
+                                                            class="p-3">Terrasse ou balcon</span></div>
+                                                        <div class="items-center py-2"><input class="h-5 w-5"
+                                                                                              type="checkbox"><span
+                                                            class="p-3">Ascenseur</span></div>
+                                                        <div class="items-center py-2"><input class="h-5 w-5"
+                                                                                              type="checkbox"><span
+                                                            class="p-3">Cheminée</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--  <div class="text-lg font-bold border-t ">
+                                             <div
+                                                 class="flex flex-row gap-3 w-full w-full mt-3 justify-center items-center ">
+                                                 <div class="underline cursor-pointer">Annuler</div>
+                                                 <div class="ml-auto">
+                                                     <button type="button"
+                                                             class="border cursor-pointer border-red-500 bg-red-500 text-white text-sm p-4 px-5 rounded-full">
+                                                         Appliquer
+                                                     </button>
+                                                 </div>
+                                             </div>
+                                         </div> -->
                                     </div>
                                 </div>
                             </div>

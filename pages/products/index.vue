@@ -103,14 +103,31 @@ const reloadProductsList = async () => {
                             </div>
                         </div>
                         <div v-if="isLocationPanel"
-                             class="absolute right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                             class="absolute right-0 z-10 mt-2 w-[400px] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                              role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
                              tabindex="-1">
-                            <div class="py-1" role="none">
+                            <div class="py-5" role="none">
                                 <!--<a v-for="(area,index) in typeOfCityList" href="#"-->
                                 <!--   class="text-gray-700 block px-4 py-2 text-sm hover:bg-cyan-100/50"-->
                                 <!--   role="menuitem"-->
                                 <!--   tabindex="-1" id="menu-item-0">{{ index + 1 }} - {{ area }}</a>-->
+                                <div class="px-5">
+                                      <div class="py-3">
+                                          <span class="font-bold">Où cherchez-vous?</span>
+                                      </div>
+                                      <div>
+                                           <div class="py-3">
+                                                <select name="" id="" class="border w-full py-3 px-3">
+                                                      <option value="exemple">Antananarivo</option>
+                                                      <option value="exemple">Antananarivo</option>
+                                                      <option value="exemple">Antananarivo</option>
+                                                </select>
+                                            </div>
+                                           <div>
+                                               <input type="text" placeholder="Ville,Code postal" class="border w-full py-3 px-3">
+                                           </div>
+                                      </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -360,6 +377,15 @@ const reloadProductsList = async () => {
                                                            placeholder="2" step="1">
                                                 </div>
                                             </div>
+                                        </div>
+                                          
+                                         <!-- Recherche avancé-->
+                                        <div>
+                                             <div>
+                                                   <div>
+                                                       <span cla>Une référence?</span>
+                                                   </div>
+                                             </div>
                                         </div>
 
                                         <div class="text-lg font-bold border-t ">

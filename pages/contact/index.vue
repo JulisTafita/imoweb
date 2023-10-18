@@ -110,7 +110,7 @@ const {data} = await useFetch('/api/contact/contact')
 
               <div class="1/3 py-5">
                     <div>
-                         <textarea name=""  id="" class="border w-[500px] h-[290px] rounded-lg"></textarea>
+                         <textarea name="" id="" class="border w-[500px] h-[290px] rounded-lg"></textarea>
                     </div>
                     <div class="py-10 px-5">
                         <span>Glissez l'image pour envoyer la photo </span>

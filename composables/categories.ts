@@ -1,4 +1,4 @@
-export const getCategories = () => {
+export const getCategories =  () => {
     const query = gql`
         query{
               getCategories{
@@ -18,3 +18,4 @@ export const getCategories = () => {
 
     return categories
 }
+

@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-    layout: "admin-product",
+    layout: "admin",
 });
 
 
@@ -8,7 +8,7 @@ definePageMeta({
 <template>
     <div>
         <div>
-            <AdminPartCategory/>
+            PRODUCT
         </div>
     </div>
 </template>

@@ -20,10 +20,9 @@ const
 
         await $fetch('/api/signIn?email=' + _email + '&&psw=' + _psw).then((data) => {
             setTimeout(async () => {
-                await navigateTo("/admin/dashboard")
+                await navigateTo("/admin/setting")
             }, 1000)
         })
-
 
     }
 

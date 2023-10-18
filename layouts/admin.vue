@@ -1,11 +1,12 @@
 <template>
-    <div class="min-h-screen flex flex-row flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
-        <div class="flex flex-col basis-1/6 w-full bg-white h-screen border-r">
-            <AdminSideBar/>
+    <div>
+        <div>
+            <AdminNav/>
         </div>
-
-        <div class="basis-5/6">
-            <slot></slot>
+        <div>
+            <div class="md:max-w-[1200px] w-screen max-w-screen md:m-auto px-3 md:px-0">
+                <slot></slot>
+            </div>
         </div>
     </div>
 </template>

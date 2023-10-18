@@ -353,7 +353,7 @@ const reloadProductsList = async () => {
                              role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
                              tabindex="-1">
                             <div class="py-1" role="none">
-                                <div class="w-[500px] h-[220px]">
+                                <div class="w-[500px] h-[700px]"> <!--   hauteur 220px-->
                                     <div class="flex flex-col gap-2 p-4 pb2">
                                         <div class="text-lg font-bold border-b">
                                             <span>Plus de critères</span>
@@ -366,7 +366,7 @@ const reloadProductsList = async () => {
                                             <div class="flex flex-col">
                                                 <div>Min</div>
                                                 <div>
-                                                    <input class="border rounded-sm px-2 py-2" type="number"
+                                                    <input class="border rounded-sm p-2" type="number"
                                                            placeholder="1" step="1">
                                                 </div>
                                             </div>
@@ -382,13 +382,40 @@ const reloadProductsList = async () => {
                                          <!-- Recherche avancé-->
                                         <div>
                                              <div>
+                                                   <div class="py-3">
+                                                       <span class="font-bold">Une référence?</span>
+                                                   </div>
                                                    <div>
-                                                       <span cla>Une référence?</span>
+                                                       <input type="text" placeholder="Ex:123456" class="w-full border py-3 px-3">
+                                                   </div>
+                                             </div>
+                                             <div>
+                                                  <div class="pt-4 pb-2">
+                                                       <span class="font-bold">Programme neuf | Viager</span>
+                                                  </div>
+                                                  <div>
+                                                       <div><input type="radio"><span class="px-3 text-gray-700 text-lg">Programme neuf</span></div>
+                                                       <div><input type="radio"><span class="px-3 text-gray-700 text-lg">Viager</span></div>
+                                                  </div>
+                                             </div>
+                                             <div>
+                                                   <div >
+                                                         <div class="py-5">
+                                                            <span  class="font-bold">Vos envies</span>
+                                                        </div>
+                                                        <div class="overflow-scroll h-[200px] bg-gray-100 p-3">
+                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Jardin, terrain</span></div>
+                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Piscine</span></div>
+                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Terrasse ou balcon</span></div>
+                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Terrasse ou balcon</span></div>
+                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Ascenseur</span></div>
+                                                             <div class="items-center py-2"><input class="h-5 w-5" type="checkbox"><span class="p-3">Cheminée</span></div>
+                                                        </div>
                                                    </div>
                                              </div>
                                         </div>
 
-                                        <div class="text-lg font-bold border-t ">
+                                       <!--  <div class="text-lg font-bold border-t ">
                                             <div
                                                 class="flex flex-row gap-3 w-full w-full mt-3 justify-center items-center ">
                                                 <div class="underline cursor-pointer">Annuler</div>
@@ -399,7 +426,7 @@ const reloadProductsList = async () => {
                                                     </button>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>

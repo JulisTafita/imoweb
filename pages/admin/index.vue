@@ -12,24 +12,38 @@ const setEmail = ref("admin@nativel.imo");
 const setPsw = ref("");
 
 
+const showLoginError = ref(false);
+
 const
     submitForm = async () => {
         isLoading.value = true;
         let _email = setEmail.value;
         let _psw = setPsw.value;
 
-        await $fetch('/api/signIn?email=' + _email + '&&psw=' + _psw).then((data) => {
+        await useFetch('/api/auth/signin', {
+            headers: {"Content-type": "application/json"},
+            method: 'POST',
+            body: {
+                "email": _email,
+                "password": _psw
+            }
+        }).then((response) => {
+
             setTimeout(async () => {
                 await navigateTo("/admin/setting")
             }, 1000)
-        })
 
+        }).catch(e => {
+            showLoginError.value = true
+            console.log(e)
+        })
     }
 
 </script>
 
 
 <template>
+    <div v-if="showLoginError">Is ERRROR</div>
     <section class="bg-gray-50 dark:bg-gray-900">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
             <div

@@ -44,9 +44,7 @@ const
         = useRoute().params
 
 
-const availableProds = getMockProducts()
-
-//let products = await getProducts()
+const {data: products} = await useFetch('/api/imo/fetch');
 
 const reloadProductsList = async () => {
 //    products = await getProducts()
@@ -502,25 +500,26 @@ const reloadProductsList = async () => {
                 <div>
                     <!--<div v-if="products.getProducts.length > 0">-->
                     <div class="flex flex-row flex-wrap gap-0 md:gap-6 justify-center md:justify-start md:mt-5">
-                        <div v-for="(pro,index) in availableProds.data">
+                        <div v-for="(pro,index) in products">
                             <Product :product="pro"/>
                         </div>
                     </div>
                     <!--</div>-->
-                    <!--<div v-if="products.getProducts.length === 0">-->
-                    <div class="flex flex-row flex-wrap gap-0 md:gap-6 justify-center md:justify-start md:mt-5">
-                        <div>
-                            Pas de produit en vitrine !
+                    <div v-if="products.length === 0">
+                        <div
+                            class="flex flex-row flex-wrap gap-0 md:gap-6 justify-center md:justify-start md:mt-5">
+                            <div>
+                                Pas de produit en vitrine !
+                            </div>
                         </div>
                     </div>
-                    <!--</div>-->
                 </div>
             </div>
             <br><br>
             <div class="flex flex-row justify-center md:justify-end items-center py-2">
                 <div>
                     <button @click="reloadProductsList" class="bg-red-400 py-2 px-10 text-white rounded-sm">
-                        {{ (prodsLength > 0) ? 'Voir plus' : 'Recharger' }}
+                        {{ (products.length > 0) ? 'Voir plus' : 'Recharger' }}
                     </button>
                 </div>
             </div>

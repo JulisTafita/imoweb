@@ -1,0 +1,75 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id    Int @id @default(autoincrement())
+  name  String
+  email String
+  password String
+  date_created DateTime @default(now()) @db.DateTime(0)
+  updated_at DateTime? @updatedAt 
+}
+
+model Sero {
+  id    Int @id @default(autoincrement())
+  name  String
+  date_created DateTime @default(now()) @db.DateTime(0)
+  updated_at DateTime? @updatedAt 
+}
+
+
+model Message {
+  id    Int @id @default(autoincrement())
+  name  String
+  first_name String
+  email String
+  phone String
+  message String
+  created_at DateTime @default(now()) @db.DateTime(0)
+  updated_at DateTime? @updatedAt 
+}
+
+model category {
+  id    Int @id @default(autoincrement())
+  name  String
+  email String
+  description String
+  created_at DateTime @default(now()) @db.DateTime(0)
+  updated_at DateTime? @updatedAt 
+}
+
+
+model imo {
+  id    Int @id @default(autoincrement())
+  title String @default("")
+  description String @db.Text @default("")
+  reference String @default("")
+  is_exclusif Boolean @default(false)
+  is_new Boolean @default(false)
+  nb_piece Int @default(0)
+  nb_room Int @default(0)
+  nb_bathroom Int @default(0)
+  nb_salle_d_eau Int @default(0)
+  has_kitchen Boolean @default(false)
+  has_gardian Boolean @default(false)
+  has_interphone Boolean @default(false)
+  has_digicode Boolean @default(false)
+  surface Int @default(0)
+  price Int @default(0)
+  type Int @default(0)
+  category Int @default(0)
+  address String @default("")
+  image String @default("")
+  created_at DateTime @default(now()) @db.DateTime(0)
+  updated_at DateTime? @updatedAt 
+}

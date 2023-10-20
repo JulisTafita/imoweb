@@ -62,6 +62,13 @@ const removeMsg = async (index = 0) => {
                                 <th scope="col" class="px-6 py-3">
                                     name & prénom
                                 </th>
+
+                                <th scope="col" class="px-6 py-3">
+                                    Email
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Téléphone
+                                </th>
                                 <th scope="col" class="px-6 py-3">
                                     Contenu du message
                                 </th>
@@ -81,11 +88,17 @@ const removeMsg = async (index = 0) => {
                                     {{ msg.name }} {{ msg.firstName }}
                                 </td>
                                 <td class="px-6 py-4">
+                                    {{ msg.email }}
+                                </td>
+                                <td class="px-6 py-4">
+                                    {{ msg.phone }}
+                                </td>
+                                <td class="px-6 py-4 text-clip overflow-hidden">
                                     {{ msg.message }}
                                 </td>
                                 <td class="px-6 py-4">
                                     <a @click="setSelectedMsgAndShowAdminCard(msg)"
-                                       class="cursor-pointer font-medium text-blue-600 dark:text-blue-500 hover:underline px-3">Modifier</a>
+                                       class="cursor-pointer font-medium text-blue-600 dark:text-blue-500 hover:underline px-3">Détails</a>
                                     <a @click="removeMsg(index)"
                                        class="cursor-pointer font-medium text-blue-600 dark:text-blue-500 hover:underline px-3">Supprimer</a>
                                 </td>

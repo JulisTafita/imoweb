@@ -5,11 +5,11 @@ const prisma = new PrismaClient();
 
 export default defineEventHandler(async (event) => {
 
-    let messages = null;
+    let products = null;
 
-    await prisma.message.findMany().then((response) => {
-        messages = response
+    await prisma.imo.findMany().then((response) => {
+        products = response
     })
     
-    return messages
+    return products
 })

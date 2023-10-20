@@ -26,29 +26,7 @@ const showTypeOfCityhDropDownState = (state = false) => {
     typeOfCityDropDownState.value = state
 }
 
-
-const {data} = await useFetch('/api/product/one?id=245');
-
-
-const mockProd = {
-    id: 24,
-    title: "The Coldest Sunset 5",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores e perferendis eaque, exercitationem praesentium nihi.",
-    price: 2800,
-    category: 0,
-    forSale: false,
-    forRent: false,
-    NbPiece: 2,
-    NbRoom: 3,
-    TotArea: 20,
-    TotLivableArea: 10,
-    IsNew: false,
-    builtOn: '2022-10-20 00:00:00',
-    CoPropertyNbOfLots: 2,
-    CoPropertyCost: 2804,
-    AnnexParking: false,
-    AnnexCave: false,
-}
+const {data: products} = await useFetch('/api/imo/fetch');
 
 </script>
 
@@ -144,14 +122,8 @@ const mockProd = {
                 </div>
                 <br>
                 <div class="flex flex-row flex-wrap gap-0 md:gap-6 justify-center md:justify-start md:mt-5">
-                    <div>
-                        <Product :product="mockProd"/>
-                    </div>
-                    <div>
-                        <Product :product="mockProd"/>
-                    </div>
-                    <div>
-                        <Product :product="mockProd"/>
+                    <div v-for="(product, index) in products">
+                        <Product :product="product"/>
                     </div>
                 </div>
                 <div
@@ -176,14 +148,8 @@ const mockProd = {
                 </div>
                 <br>
                 <div class="flex flex-row flex-wrap gap-0 md:gap-6 justify-center md:justify-start md:mt-5">
-                    <div>
-                        <Product :product="mockProd"/>
-                    </div>
-                    <div>
-                        <Product :product="mockProd"/>
-                    </div>
-                    <div>
-                        <Product :product="mockProd"/>
+                    <div v-for="(product, index) in products">
+                        <Product :product="product"/>
                     </div>
                 </div>
                 <div
@@ -199,6 +165,5 @@ const mockProd = {
             </div>
         </div>
     </div>
-
 
 </template>

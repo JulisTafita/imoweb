@@ -5,11 +5,11 @@ const prisma = new PrismaClient();
 
 export default defineEventHandler(async (event) => {
 
-    let messages = null;
+    let user = null;
 
-    await prisma.message.findMany().then((response) => {
-        messages = response
+    await prisma.user.findMany().then((response) => {
+        user = response
     })
-    
-    return messages
+
+    return user
 })

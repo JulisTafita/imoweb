@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/apollo'],
   devtools: { 
     enabled: true 
   },
@@ -18,13 +17,4 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  apollo: {
-    autoImports: true,
-    clients: {
-      default: {
-        //        httpEndpoint: 'http://185.170.214.196:8085/query'
-                httpEndpoint: 'http://localhost:8085/query'
-      }
-    },
-  }
 })
